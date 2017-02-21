@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97DC6CD9-255B-4E57-9896-8DD47C9E549E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>test_HAPITypes</RootNamespace>
+    <AssemblyName>test_HAPITypes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="TestVec2.cs" />
+    <Compile Include="TestVec3.cs" />
+    <Compile Include="TestVec4.cs" />
+    <Compile Include="TestMat3.cs" />
+    <Compile Include="TestMat4.cs" />
+    <Compile Include="TestQuat.cs" />
+    <Compile Include="TestRot.cs" />
+    <Compile Include="TestForceEffect.cs" />
+    <Compile Include="MiscellaneousExamples.cs" />
+    <Compile Include="TestGeometryPrimitive.cs" />
+    <Compile Include="TestGenericVectors.cs" />
+    <Compile Include="TestAnyHapticsDevice.cs" />
+    <Compile Include="..\..\..\build\cs\AABBPrimitiveTree.cs">
+      <Link>cs\AABBPrimitiveTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\AABBTree.cs">
+      <Link>cs\AABBTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\AABox.cs">
+      <Link>cs\AABox.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\AABoxBound.cs">
+      <Link>cs\AABoxBound.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\AnyHapticsDevice.cs">
+      <Link>cs\AnyHapticsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\BBPrimitiveTree.cs">
+      <Link>cs\BBPrimitiveTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\BinaryBoundTree.cs">
+      <Link>cs\BinaryBoundTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\BoundObject.cs">
+      <Link>cs\BoundObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\BoundPrimitive.cs">
+      <Link>cs\BoundPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\CollisionObject.cs">
+      <Link>cs\CollisionObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Constraints.cs">
+      <Link>cs\Constraints.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\ContactInfo.cs">
+      <Link>cs\ContactInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\csHAPI.cs">
+      <Link>cs\csHAPI.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\csHAPIPINVOKE.cs">
+      <Link>cs\csHAPIPINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Cylinder.cs">
+      <Link>cs\Cylinder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\DeviceValues.cs">
+      <Link>cs\DeviceValues.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\EffectInput.cs">
+      <Link>cs\EffectInput.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\EffectOutput.cs">
+      <Link>cs\EffectOutput.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\FaceType.cs">
+      <Link>cs\FaceType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\FrictionSurface.cs">
+      <Link>cs\FrictionSurface.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\GeometryPrimitive.cs">
+      <Link>cs\GeometryPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\GodObjectRenderer.cs">
+      <Link>cs\GodObjectRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIForceEffect.cs">
+      <Link>cs\HAPIForceEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIFrictionSurface.cs">
+      <Link>cs\HAPIFrictionSurface.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIHapticObject.cs">
+      <Link>cs\HAPIHapticObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIHapticsDevice.cs">
+      <Link>cs\HAPIHapticsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIHapticShape.cs">
+      <Link>cs\HAPIHapticShape.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIHapticsRenderer.cs">
+      <Link>cs\HAPIHapticsRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPIProxyBasedRenderer.cs">
+      <Link>cs\HAPIProxyBasedRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HAPISurfaceObject.cs">
+      <Link>cs\HAPISurfaceObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\HapticPrimitive.cs">
+      <Link>cs\HapticPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\IntersectionInfo.cs">
+      <Link>cs\IntersectionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\LineSegment.cs">
+      <Link>cs\LineSegment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Mat3.cs">
+      <Link>cs\Mat3.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Mat4.cs">
+      <Link>cs\Mat4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\OBBPrimitiveTree.cs">
+      <Link>cs\OBBPrimitiveTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\OBBTree.cs">
+      <Link>cs\OBBTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\OrientedBoxBound.cs">
+      <Link>cs\OrientedBoxBound.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\PairShapeContactInfo.cs">
+      <Link>cs\PairShapeContactInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Plane.cs">
+      <Link>cs\Plane.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\PlaneConstraint.cs">
+      <Link>cs\PlaneConstraint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Point.cs">
+      <Link>cs\Point.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Quat.cs">
+      <Link>cs\Quat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\RefCountedClass.cs">
+      <Link>cs\RefCountedClass.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Rot.cs">
+      <Link>cs\Rot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\RuspiniRenderer.cs">
+      <Link>cs\RuspiniRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\SBPrimitiveTree.cs">
+      <Link>cs\SBPrimitiveTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Sphere.cs">
+      <Link>cs\Sphere.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\SphereBound.cs">
+      <Link>cs\SphereBound.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\SphereBoundTree.cs">
+      <Link>cs\SphereBoundTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Triangle.cs">
+      <Link>cs\Triangle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Vec2.cs">
+      <Link>cs\Vec2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Vec3.cs">
+      <Link>cs\Vec3.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\Vec4.cs">
+      <Link>cs\Vec4.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecGeometryPrimitive.cs">
+      <Link>cs\VecGeometryPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecHAPIForceEffect.cs">
+      <Link>cs\VecHAPIForceEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecHAPIHapticShape.cs">
+      <Link>cs\VecHAPIHapticShape.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecInt.cs">
+      <Link>cs\VecInt.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecLineSegment.cs">
+      <Link>cs\VecLineSegment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecPairShapeContactInfo.cs">
+      <Link>cs\VecPairShapeContactInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecPoint.cs">
+      <Link>cs\VecPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecTriangle.cs">
+      <Link>cs\VecTriangle.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\build\cs\VecVec3.cs">
+      <Link>cs\VecVec3.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\unittest\unittest.csproj">
+      <Project>{E67F3456-7F83-44A8-91AA-374946290491}</Project>
+      <Name>unittest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cs\" />
+  </ItemGroup>
+</Project>
