@@ -26,11 +26,15 @@ ELSE(MSVC)
 ENDIF( MSVC )
 
 
+if("${CMAKE_GENERATOR}" MATCHES "(Win64|IA64)")
+    SET(LIBTYPE "lib64")
+else()
+    SET(LIBTYPE "lib32")
+endif()
 
 # We look for the corresponding path by searching for the proper libraries
-
 FIND_PATH(HAPI_ROOT
-    NAMES lib/${HAPI_NAME}.lib lib32/${HAPI_NAME}.lib  lib/lib${HAPI_NAME}.so lib32/lib${HAPI_NAME}.so
+    NAMES lib/${HAPI_NAME}.lib ${LIBTYPE}/${HAPI_NAME}.lib  lib/lib${HAPI_NAME}.so ${LIBTYPE}/lib${HAPI_NAME}.so
     PATHS
         C:/HAPI
         $ENV{H3D_ROOT}
@@ -61,28 +65,28 @@ if (HAPI_ROOT) #if we found the proper library, then
     FIND_LIBRARY(HAPI_LIBRARY
         NAMES ${HAPI_NAME}
         PATHS ${HAPI_ROOT}
-        PATH_SUFFIXES lib lib32
+        PATH_SUFFIXES lib ${LIBTYPE}
         DOC "Path in which the file ${HAPI_NAME} is located."
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(HAPI_LIBRARY_DEBUG
         NAMES ${HAPI_NAME}_d
         PATHS ${HAPI_ROOT}
-        PATH_SUFFIXES lib lib32
+        PATH_SUFFIXES lib ${LIBTYPE}
         DOC "Path in which the file ${HAPI_NAME} debug is located."
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(H3DUTIL_LIBRARY
         NAMES ${H3DUTIL_NAME}
         PATHS ${HAPI_ROOT}
-        PATH_SUFFIXES lib lib32
+        PATH_SUFFIXES lib ${LIBTYPE}
         DOC "Path in which the file ${H3DUTIL_NAME} is located."
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(H3DUTIL_LIBRARY_DEBUG
         NAMES ${H3DUTIL_NAME}_d
         PATHS ${HAPI_ROOT}
-        PATH_SUFFIXES lib lib32
+        PATH_SUFFIXES lib ${LIBTYPE}
         DOC "Path in which the file ${H3DUTIL_NAME} debug is located."
         NO_DEFAULT_PATH
     )
@@ -114,7 +118,6 @@ MARK_AS_ADVANCED(HAPI_LIBRARY)
 MARK_AS_ADVANCED(HAPI_LIBRARY_DEBUG)
 MARK_AS_ADVANCED(H3DUTIL_LIBRARY)
 MARK_AS_ADVANCED(H3DUTIL_LIBRARY_DEBUG)
-
 
 set(HAPI_INCLUDE_DIRS   ${HAPI_INCLUDE_DIR}   ${H3DUTIL_INCLUDE_DIR}   "${HAPI_ROOT}/External/include/pthread")
 set(HAPI_EXTERNAL_DIR ${HAPI_ROOT}/External)
